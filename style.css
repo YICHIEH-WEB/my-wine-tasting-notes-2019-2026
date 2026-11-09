@@ -1,0 +1,248 @@
+/* 凱莉品飲頻道 — Sample D：深色奢華，左圖右文，去背等高瓶身，淡金基線 */
+:root {
+  --bg: #0e0c0a;
+  --card: #1c1917;
+  --ivory: #ede6da;
+  --muted: #a89f91;
+  --gold: #d4b36a;
+  --gold-small: #c9a45c;
+  --gold-line: rgba(201, 162, 39, 0.25);
+  --gold-baseline: rgba(212, 179, 106, 0.55);
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ivory);
+  font-family: "Montserrat", "PingFang TC", "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+::selection { background: rgba(212, 179, 106, 0.35); }
+
+/* ---------- Header ---------- */
+.site-head {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px 8px;
+  text-align: center;
+}
+
+.site-head h1 {
+  font-family: "Cormorant", "Noto Serif TC", serif;
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+
+.site-head .collection {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---------- Searches (sticky, near-opaque + thin gold edge) ---------- */
+.searches {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0 8px;
+  padding: 16px 18px;
+  background: rgba(14, 12, 10, 0.94);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+}
+
+.search-field label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--gold-small);
+  margin-bottom: 6px;
+}
+
+.search-field input {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ivory);
+  background: #262019;
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-field input:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(212, 179, 106, 0.35);
+}
+
+.search-field input::placeholder { color: #6f675c; }
+
+.count {
+  margin: 10px 2px 20px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* ---------- Wine card: photo ~47% left, text right ---------- */
+.wine {
+  display: grid;
+  grid-template-columns: 47% 1fr;
+  gap: 0 36px;
+  background: var(--card);
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+  margin-bottom: 28px;
+  overflow: hidden;
+  animation: rise 0.35s ease-out both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wine { animation: none; }
+}
+
+.photo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 360px;
+  padding: 28px 16px 0;
+  background: #141110;
+  border-bottom: 1px solid var(--gold-baseline);
+}
+
+.photo img {
+  display: block;
+  height: 320px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.photo.no-photo {
+  align-items: center;
+  padding-bottom: 28px;
+}
+
+.photo.no-photo span {
+  font-size: 15px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.body { padding: 30px 32px 30px 0; }
+
+.num {
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.body h3 {
+  font-family: "Cormorant", "Noto Serif TC", serif;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ivory);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+
+.note {
+  font-size: 18.5px;
+  line-height: 1.75;
+  white-space: pre-line;
+  margin: 0 0 16px;
+  overflow-wrap: break-word;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 13.5px;
+  color: var(--gold-small);
+  border: 1px solid var(--gold-line);
+  border-radius: 999px;
+}
+
+.price {
+  margin: 4px 0 0;
+  font-size: 15px;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+
+.price span { font-weight: 600; }
+
+/* ---------- Empty state ---------- */
+.empty {
+  text-align: center;
+  font-size: 17px;
+  color: var(--muted);
+  padding: 48px 0;
+}
+
+/* ---------- Mobile: photo on top, centered, 400px ---------- */
+@media (max-width: 700px) {
+  .site-head { padding: 40px 20px 4px; }
+  .site-head h1 { font-size: 34px; }
+  main { padding: 0 16px 64px; }
+
+  .searches {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .wine {
+    grid-template-columns: 1fr;
+    margin-bottom: 24px;
+  }
+
+  .photo {
+    height: 400px;
+    min-height: 400px;
+    padding: 20px 16px 0;
+  }
+
+  .photo img { height: 360px; }
+
+  .body { padding: 24px 22px 28px; }
+}
