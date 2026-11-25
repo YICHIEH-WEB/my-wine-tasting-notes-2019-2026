@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>凱莉品飲頻道 — 2019–2026 品飲筆記</title>
+<title>凱莉誠實杯底話 — 2019–2026 品飲筆記</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 <style>
 
   /* 版式語言：Wine Folly《The Essential Guide to Wine》第 28 頁附近 Handling Wine 章節
@@ -23,6 +26,8 @@
   header{padding-bottom:20px;border-bottom:3px solid var(--ink);margin-bottom:10px}
   .kicker{letter-spacing:.32em;font-size:12px;font-weight:700;color:var(--red)}
   h1{font-size:44px;line-height:1.15;margin:12px 0 6px;letter-spacing:.02em}
+  h1.site-title{font-family:"Ma Shan Zheng","Kaiti SC","KaiTi",cursive;font-size:52px;color:var(--red);transform:rotate(-1.5deg);letter-spacing:.04em}
+  @media (max-width:480px){h1.site-title{font-size:38px}}
   header .lede{font-size:18px;color:var(--ink-soft);margin:0;max-width:640px}
   h2.section{font-size:30px;margin:44px 0 4px;letter-spacing:.02em}
   .section-sub{font-size:14.5px;color:var(--ink-soft);margin:0 0 18px;max-width:680px}
@@ -168,7 +173,7 @@
 
 <header>
   <div class="kicker">CARRIE · WINE TASTING NOTES</div>
-  <h1>凱莉品飲頻道</h1>
+  <h1 class="site-title">凱莉誠實杯底話</h1>
   <p class="lede">2019–2026 品飲筆記，共 986 款。每一支酒，三個重點，一頁看懂。</p>
 </header>
 
@@ -201,6 +206,13 @@
       <div class="suggest" id="suggestName" role="listbox" hidden></div>
     </div>
   </div>
+  <div class="search-row">
+    <span class="lbl">搜尋酒鬼朋友們：</span>
+    <div class="search-box">
+      <input type="search" id="searchPeople" autocomplete="off" placeholder="輸入人名或場合，例如 丹丹">
+      <div class="suggest" id="suggestPeople" role="listbox" hidden></div>
+    </div>
+  </div>
   <span class="lbl">排序：</span>
   <button class="sort-btn" data-key="vintage" data-dir="desc" data-label="年份" data-desc="新→舊" data-asc="舊→新">年份 ↓ 新→舊</button>
   <button class="sort-btn" data-key="price" data-dir="desc" data-label="價格" data-desc="高→低" data-asc="低→高">價格 ↓ 高→低</button>
@@ -213,7 +225,7 @@
       <option value="其他">其他</option>
     </select>
   </span>
-  <p class="sort-note">規則：預設為資料集順序（2026 年 35 筆在前、樂活 951 筆在後）；年份取酒款年份，無年份者排最後；價格取站上 Wine-Searcher 國際均價，無價格者永遠排最後並標明「無價格」；再點同一按鈕可切換升／降冪。產區下拉只篩選顯示的卡片，不改變排序。搜尋酒款即打即篩，點建議可直接定位到該酒；搜尋與產區下拉同時生效。</p>
+  <p class="sort-note">規則：預設為資料集順序（2026 年 35 筆在前、樂活 951 筆在後）；年份取酒款年份，無年份者排最後；價格取站上 Wine-Searcher 國際均價，無價格者永遠排最後並標明「無價格」；再點同一按鈕可切換升／降冪。產區下拉只篩選顯示的卡片，不改變排序。搜尋酒款即打即篩，點建議可直接定位到該酒；搜尋與產區下拉同時生效。搜尋酒鬼朋友們找一起喝酒的人或場合（標籤＋筆記內文），點建議直接篩出那個人的酒。</p>
 </div>
 
 <div class="cards" id="cards"><article class="card" data-id="b1-1" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-01.png" alt="Henri Boillot Pommard 1er Cru Les Rugiens-Bas 2013 瓶身" loading="lazy"></div><div class="card-head"><h3 class="wine-name">Henri Boillot Pommard 1er Cru Les Rugiens-Bas 2013</h3><p class="wine-sub">勃艮第 · 2013 年</p><p class="price-line">國際均價 <b>US$88</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>好喝 橡木桶味道重 好喝！</p></div><div class="block"><span class="block-tag b1">研究內容</span><h4>研究尚未完成</h4><p class="lede">這支酒的研究內容正在分批製作中，尚未補上酒莊背景、地塊與年份解析。</p></div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-2" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-02.png" alt="Régnard Gevrey-Chambertin 2022 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Régnard Gevrey-Chambertin 2022</h3><p class="wine-sub">勃艮第 · Gevrey-Chambertin · 2022 年</p><p class="price-line">國際均價 <b>US$124</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>普通 但香氣不錯</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">1860 年由 Zéphir Régnard 在夏布利創立的歷史酒商，1984 年由拉杜塞特男爵接手，除夏布利白酒外亦出產布根地其他產區酒款。</p><div class="facts"><span class="fact"><b>1860 年，夏布利</b>創立</span><span class="fact"><b>1984 年由 Baron Patrick de Ladoucette 接手</b>收購</span><span class="fact"><b>夏布利歷史城區，酒窖可追溯至十八世紀</b>總部</span><span class="fact"><b>以夏布利白酒為主，亦產 Gevrey-Chambertin 等紅酒</b>酒款</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">地塊土壤：未確認</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊：未確認。</li><li>資料集寫作 Valeria Naudin Gevrey Chambertin Regnard 2022，「Valeria Naudin」所指未確認；僅能確認為 Régnard 出品的 Gevrey-Chambertin 村級酒。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2022 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:92%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>傳奇年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2022 年是有紀錄以來最溫暖、乾燥、日照最充足的年份，六月暴風雨及時為葡萄藤補水，產量豐盛，較 2021 年增加逾七成，八月二十二日開始採收。</li><li>紅酒被 Allen Meadows 稱為 Côte de Nuits 的現代經典，William Kelley 認為其兼具 2017 年的魅力與 2015 年的深度。</li><li>白酒出乎意料地清新，Jasper Morris 稱 Chablis 乾淨、純粹、結構良好；惟集中度不及 2019 與 2020 年。</li><li>整體為紅酒主導的傳奇年份，仍在陳年。</li><li>100% 黑皮諾（Gevrey-Chambertin 村級紅酒皆為黑皮諾）。</li></ul></div><div class="tip"><b>TIP</b>　仍在陳年，頂級酒可放多年，現飲宜醒酒。</div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-3" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-03.png" alt="Valeria Naudin Nuits-Saint-Georges 2022 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Valeria Naudin Nuits-Saint-Georges 2022</h3><p class="wine-sub">勃艮第 · Nuits-Saint-Georges · 2022 年</p><p class="price-line">國際均價 <b>US$102</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>我覺得比GC 好喝 開瓶三個小時以後很香需要醒的酒</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">以 Valeria Naudin 為名的布根地酒款見於酒單與餐會紀錄（如 Gevrey-Chambertin Regnard 2021），但目前未找到公開的酒莊介紹，莊主背景、葡萄園位置與釀造方式皆未確認。</p><div class="facts"><span class="fact"><b>Gevrey-Chambertin Regnard</b>已知酒款</span><span class="fact"><b>Côte de Nuits</b>產區</span><span class="fact"><b>未確認，無公開介紹</b>酒莊資料</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">土壤：未確認</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊：未確認。</li><li>本酒僅標示村莊級 Nuits-Saint-Georges，未標示單一地塊。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2022 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:92%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>傳奇年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2022 年是有紀錄以來最溫暖、乾燥、日照最充足的年份，六月暴風雨及時為葡萄藤補水，產量豐盛，較 2021 年增加逾七成，八月二十二日開始採收。</li><li>紅酒被 Allen Meadows 稱為 Côte de Nuits 的現代經典，William Kelley 認為其兼具 2017 年的魅力與 2015 年的深度。</li><li>白酒出乎意料地清新，Jasper Morris 稱 Chablis 乾淨、純粹、結構良好；惟集中度不及 2019 與 2020 年。</li><li>整體為紅酒主導的傳奇年份，仍在陳年。</li><li>2022 年為布根地有紀錄以來最暖、最乾、日照最多的一年，紅酒評 9/10；Allen Meadows 稱 Côte de Nuits 為「現代經典」。</li><li>100% 黑皮諾。</li></ul></div><div class="tip"><b>TIP</b>　仍在陳年，頂級酒可放多年，現飲宜醒酒。</div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-4" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-04.png" alt="Domaine Lippe-Boileau Côte de Nuits-Villages 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Domaine Lippe-Boileau Côte de Nuits-Villages</h3><p class="wine-sub">勃艮第 · Côte de Nuits-Villages · 年份未標</p><p class="price-line"><span class="none">價格：無價格（站上尚未查價）</span></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>萃取太多 單寧狠抓 不是我喜歡的樣子 舌旁很酸很刺 有點苦 整個不平衡</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">位於 Côte de Nuits 北端 Brochon 村的酒莊，出產 Fixin 與 Côte de Nuits-Villages 等酒款；目前未找到公開的酒莊介紹，規模、歷史與釀造方式皆未確認。</p><div class="facts"><span class="fact"><b>Brochon（Côte de Nuits 北端）</b>所在地</span><span class="fact"><b>Fixin Les Vignes Aux Grands</b>已知酒款</span><span class="fact"><b>未確認，無公開介紹</b>酒莊資料</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">土壤：未確認</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊：未確認。</li><li>本酒僅標示 Côte de Nuits-Villages，未標示單一地塊。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>年份解析</h4><p class="lede">年份：未確認（酒名未標年份）。</p><ul class="short"><li>年份未確認，資料集未標示年份。</li><li>100% 黑皮諾；Fixin 產區橫跨 Fixin 與 Brochon 兩村，酒莊位於 Brochon。</li></ul></div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-5" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-05.png" alt="Charles Noëllat Nuits-Saint-Georges 2002 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Charles Noëllat Nuits-Saint-Georges 2002</h3><p class="wine-sub">勃艮第 · Nuits-Saint-Georges · 2002 年</p><p class="price-line">國際均價 <b>US$100</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>柔順也不錯，很溫柔好喝 但喝的出來不是貴酒 但是三層香氣發展到的很細緻 茶香感</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">19 世紀末由 Félix Noëllat 在 Vosne-Romanée 奠基，Charles Noëllat（1868 年生）與妻子於 20 世紀初正式創立，1930 年代達約 25 公頃，1988 年大部分葡萄園售予 Lalou Bize-Leroy 併入 Domaine Leroy；2013 年後人以 Maison Charles Noëllat 之名復興。</p><div class="facts"><span class="fact"><b>20 世紀初，Charles Noëllat 與妻子 Anne-Marie</b>創立</span><span class="fact"><b>約 25 公頃，含 Richebourg、Grands-Échezeaux 等特級園</b>1930 年代</span><span class="fact"><b>大部分葡萄園售予 Lalou Bize-Leroy，併入 Domaine Leroy</b>1988 年</span><span class="fact"><b>後人以 Maison Charles Noëllat 之名復興</b>2013 年</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">土壤：未確認</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊：未確認。</li><li>本酒僅標示村莊級 Nuits-Saint-Georges，未標示單一地塊。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2002 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:87%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>優異年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2002 年生長季乾爽涼爽，夏季天晴時雨，九月初雨水補充水分後北風吹乾葡萄，九月十六日於晴空下採收。</li><li>紅酒純淨優雅、果味細緻，Jasper Morris 更稱其為 Chablis 的黃金年份；白酒與 Chablis 皆出色，Chablis 尤以礦物感見長。</li><li>風格屬於古典優雅，酸度與單寧俱佳，陳年二十年後多數酒款已完全開展，頂級酒款仍具活力。</li><li>整體為紅白皆佳的優異年份，Côte de Nuits 與 Chablis 表現最佳。</li><li>2002 年紅酒純淨優雅，評 8/10；Jasper Morris 認為 2002 年份紅酒在 20 年後幾乎全數適飲。</li><li>100% 黑皮諾。</li></ul></div><div class="tip"><b>TIP</b>　多數酒款正值適飲高峰，頂級酒仍可再放。</div><p class="card-foot">標籤：<span class="tag">（Sean 開的</span>　·　點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-6" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-06.png" alt="Didier Dagueneau Blanc Fumé de Pouilly 2015 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag white">白酒</span><h3 class="wine-name">Didier Dagueneau Blanc Fumé de Pouilly 2015</h3><p class="wine-sub">羅亞爾河 · Pouilly-Fumé · 2015 年</p><p class="price-line">國際均價 <b>US$89</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>煙燻、柑橘 🍊 烤土司 爸爸說是喝過的白酒最好喝的</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">1982 年 Didier Dagueneau 在 Saint-Andelain 自立門戶，率先以橡木桶釀 Sauvignon Blanc；2008 年他空難辭世後由長子 Louis-Benjamin 接手。</p><div class="facts"><span class="fact"><b>1982 年</b>創立</span><span class="fact"><b>12 公頃</b>葡萄園</span><span class="fact"><b>橡木桶發酵陳年</b>釀法</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip soft">單一地塊：未確認</span><span class="chip">上坡：燧石＋黏土</span><span class="chip">下坡：黏土</span><span class="chip">鈣質泥灰岩</span></div><ul class="short"><li>地塊：未確認。</li><li>Blanc Fumé de Pouilly 為多地塊年輕葡萄混釀的入門酒款。</li><li>無具名單一地塊公開資料。</li><li>產區土壤概況（非單一地塊）：上坡燧石混合黏土，下坡黏土較多，另有鈣質泥灰岩。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2015 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:85%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>優異年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2015 年是羅亞爾河優異年份。</li><li>Jancis Robinson：全區非常有前景，Sancerre 與 Pouilly-Fumé 品質優異。</li><li>Jancis Robinson 前線報導：Sancerre 與 Pouilly 的 2015 年品質難以超越，可與 2006 年相比；當地釀酒師評 2006 年品質介於 2005 與 1989 年之間。</li><li>BIVC：炎熱乾燥、風味純淨，白酒飽滿優雅，紅酒單寧圓潤絲滑。</li><li>乾旱與開花期低溫令全區產量偏低，Sancerre 與 Pouilly 約低一至一成半。</li></ul></div><div class="tip"><b>TIP</b>　入門酒款由多地塊年輕葡萄混釀；想喝單一地塊表現，找 Silex 或 Pur Sang。</div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-7" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-07.png" alt="Jean-Marie Fourrier Chambertin 2018 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Jean-Marie Fourrier Chambertin 2018</h3><p class="wine-sub">勃艮第 · Chambertin · 2018 年</p><p class="price-line">國際均價 <b>US$676</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>茶香感 木質調很重 果乾果香味濃郁</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">1930 年代由 Fernand Pernot 創立，1994 年起由第五代 Jean-Marie Fourrier 掌舵，以老藤與優雅細緻的 Gevrey-Chambertin 聞名。</p><div class="facts"><span class="fact"><b>1930 年代，Fernand Pernot</b>創立</span><span class="fact"><b>約 10 公頃，分布於 Gevrey-Chambertin、Morey-Saint-Denis、Chambolle-Musigny 與 Vougeot</b>葡萄園</span><span class="fact"><b>1994 年 Jean-Marie Fourrier，第五代</b>接手</span><span class="fact"><b>僅用 30 年以上老藤，新桶不超過 20%</b>釀造</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">黏土石灰岩</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊 Chambertin：特級園，位於坡中段，黏土石灰岩土壤，排水良好。</li><li>本酒為 négoce 酒款，具體葡萄來源地塊未確認；酒莊自有特級園僅有 Griotte-Chambertin。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2018 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:86%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>優異年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2018 年冬季多雨，隨後迎來二戰以來最炎熱的生長季之一，八月底開始採收，產量豐盛、白酒尤多。</li><li>紅酒果味豐腴寬廣，William Kelley 稱其多肉、寬闊而貪吃，Decanter 給 Côte d&#x27;Or 紅酒四點五分（滿分五分）；白酒出乎意料地清脆，但酸度偏低、傳奇之作較少。</li><li>Chablis 產量為數十年來最豐，酒精度偏高、酸度偏低；炎熱年份中，涼爽地塊與黏土土壤的酒款表現較佳。</li><li>整體為豐收的優異年份，紅酒略勝白酒，現已進入適飲期。</li><li>2011 年創立的 négoce 品牌 Jean-Marie Fourrier 出品，僅向酒莊無自有葡萄園的產區購葡萄釀造，Chambertin 為其中之一。</li><li>100% 黑皮諾。</li></ul></div><div class="tip"><b>TIP</b>　紅白皆已可飲用，頂級紅酒仍可再放。</div><div class="unconf"><b>待確認</b><ul><li>本酒 Chambertin 2018 為 négoce 品牌 Jean-Marie Fourrier 出品，葡萄來源地塊未確認；酒莊自有特級園僅有 Griotte-Chambertin。</li></ul></div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-8" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-08.png" alt="Marchand-Tawse Marsannay 2021 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Marchand-Tawse Marsannay 2021</h3><p class="wine-sub">勃艮第 · Marsannay · 2021 年</p><p class="price-line">國際均價 <b>US$43</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>醒了兩小時 好喝很多 淡淡木質調 很輕盈 很融合 果實本身很成熟但是是優雅的</p></div><div class="block"><span class="block-tag b1">酒莊背景</span><p class="lede">由布根地釀酒師 Pascal Marchand 與加拿大 Tawse 酒莊合作的酒商，基地在 Nuits-Saint-Georges，另以 Domaine Tawse 經營自有葡萄園。</p><div class="facts"><span class="fact"><b>Nuits-Saint-Georges</b>基地</span><span class="fact"><b>Pascal Marchand</b>釀酒師</span><span class="fact"><b>Marchand-Tawse（酒商）與 Domaine Tawse（自有葡萄園）</b>雙品牌</span><span class="fact"><b>一向來自產區南部的 Couchey</b>Marsannay 來源</span></div></div><div class="block"><span class="block-tag b2">地塊與風土</span><div class="chips"><span class="chip">石灰岩</span><span class="chip">泥灰岩</span><span class="chip soft">朝向：未確認</span></div><ul class="short"><li>地塊：Marsannay 村級酒，葡萄來自產區南部 Couchey，2021 年份另含部分 Longeroies。</li><li>Marsannay 基岩為巴通階與巴柔階石灰岩夾泥灰岩。</li></ul></div><div class="block"><span class="block-tag b3">年份解析</span><h4>2021 年在產區表現如何？</h4><div class="scale"><div class="scale-track"><div class="scale-marker" style="left:72%"></div></div><div class="scale-labels"><span>LOW 普通</span><span>好</span><span>優秀</span><span>HIGH 傳奇</span></div><p class="scale-cap">年份評價：<b>好年份</b>（位置依所引來源的文字評價對照示意，非官方分數）</p></div><ul class="short"><li>2021 年四月初霜害低至零下七度，夏多內首當其衝，產量常僅正常兩成，Chablis 與 Mâconnais 幾近全毀；隨後迎來涼爽多雨、霉病壓力的夏季，全區產量不足一百萬百升，遠低於正常一百五十萬百升。</li><li>採收延至九月中旬，比 2020 年晚約一個月；幸而九月中旬陽光挽救了年份，酒款風格古典、酸度良好、果味內斂。</li><li>紅酒被 William Kelley 比作 2017 與 2000 年，失敗之作極少；Chablis 受創最重，表現最弱。</li><li>整體為逆境中表現超乎預期的中上年份，量少質精。</li><li>2021 年份來自 Couchey 南部，加入部分 Longeroies 葡萄，約三分之一整串發酵。</li><li>Burgundy-Report 形容其香氣深廣、花香優雅，收尾悠長，評價甚佳。</li></ul></div><div class="tip"><b>TIP</b>　Burgundy-Report 建議再放兩年飲用。</div><p class="card-foot">點卡片看單款酒詳細頁</p></div></article><article class="card" data-id="b1-9" tabindex="0"><div class="card-top"><div class="photo"><img src="assets/bottle-09.png" alt="Jean Grivot Bourgogne 2018 瓶身" loading="lazy"></div><div class="card-head"><span class="type-tag red">紅酒</span><h3 class="wine-name">Jean Grivot Bourgogne 2018</h3><p class="wine-sub">勃艮第 · Bourgogne · 2018 年</p><p class="price-line">國際均價 <b>US$51</b></p></div></div><div class="card-body"><div class="note-box"><h4>Carrie隨手撰筆記原文（一字未改）</h4><p>太濃郁！不夠細緻 但
@@ -611,8 +623,11 @@ function cardHTML(w){
 }
 function render(list){
   if (!list.length) {
-    const msg = qName.trim()
-      ? "找不到符合「" + esc(qName.trim()) + "」的酒，換個關鍵字試試。"
+    const parts = [];
+    if (qName.trim()) parts.push("酒名「" + esc(qName.trim()) + "」");
+    if (qPeople.trim()) parts.push("酒友「" + esc(qPeople.trim()) + "」");
+    const msg = parts.length
+      ? "找不到符合 " + parts.join("＋") + " 的酒，換個關鍵字試試。"
       : "「" + esc(currentRegion) + "」這個產區還沒有酒。";
     cardsEl.innerHTML = '<p class="empty-note">' + msg + '</p>';
     return;
@@ -628,14 +643,21 @@ function render(list){
 let currentKey = null, currentDir = "desc";
 let currentRegion = "全部";
 let qName = "";
+let qPeople = "";
 function matchName(w, q){
   if (!q) return true;
   const hay = ((w.displayName || "") + " " + (w.origName || "")).toLowerCase();
   return hay.includes(q);
 }
+function matchPeople(w, q){
+  if (!q) return true;
+  const hay = (((w.tags || []).join(" ")) + " " + (w.note || "")).toLowerCase();
+  return hay.includes(q);
+}
 function applyView(){
   const q = qName.trim().toLowerCase();
-  const filtered = WINES.filter(w => (currentRegion === "全部" || w.region === currentRegion) && matchName(w, q));
+  const qp = qPeople.trim().toLowerCase();
+  const filtered = WINES.filter(w => (currentRegion === "全部" || w.region === currentRegion) && matchName(w, q) && matchPeople(w, qp));
   render(currentKey ? sortEntries(filtered, currentKey, currentDir) : filtered);
 }
 document.querySelectorAll(".sort-btn").forEach(btn => {
@@ -714,6 +736,58 @@ searchInput.addEventListener("keydown", e => {
 });
 searchInput.addEventListener("blur", () => { setTimeout(hideSuggest, 150); });
 document.addEventListener("click", e => { if (!e.target.closest(".search-box")) hideSuggest(); });
+/* ===== 搜尋酒鬼朋友們＋即時建議 ===== */
+const peopleInput = document.getElementById("searchPeople");
+const suggestPeopleBox = document.getElementById("suggestPeople");
+const PEOPLE_TAGS = (() => {
+  const counts = {};
+  WINES.forEach(w => (w.tags || []).forEach(t => { counts[t] = (counts[t] || 0) + 1; }));
+  return Object.keys(counts).map(t => ({ tag: t, n: counts[t] }));
+})();
+let peopleItems = [], peopleActive = -1;
+function hideSuggestPeople(){ suggestPeopleBox.hidden = true; peopleItems = []; peopleActive = -1; }
+function showSuggestPeople(){
+  const q = peopleInput.value.trim().toLowerCase();
+  if (q.length < 1) { hideSuggestPeople(); return; }
+  const hits = PEOPLE_TAGS.filter(x => x.tag.toLowerCase().includes(q)).sort((a, b) => b.n - a.n).slice(0, 8);
+  if (!hits.length) {
+    suggestPeopleBox.innerHTML = '<div class="suggest-empty">找不到「' + esc(peopleInput.value.trim()) + '」，換個名字或場合試試。</div>';
+    suggestPeopleBox.hidden = false; peopleItems = []; peopleActive = -1;
+    return;
+  }
+  peopleItems = hits;
+  peopleActive = -1;
+  suggestPeopleBox.innerHTML = hits.map((x, i) =>
+    '<button type="button" class="suggest-item" role="option" data-i="' + i + '">' + esc(x.tag) +
+    '<small>' + x.n + ' 支酒</small></button>').join("");
+  suggestPeopleBox.hidden = false;
+  suggestPeopleBox.querySelectorAll(".suggest-item").forEach(el => {
+    el.addEventListener("mousedown", e => { e.preventDefault(); pickSuggestPeople(+el.dataset.i); });
+  });
+}
+function pickSuggestPeople(i){
+  const x = peopleItems[i];
+  if (!x) return;
+  peopleInput.value = x.tag;
+  qPeople = x.tag;
+  hideSuggestPeople();
+  applyView();
+  document.getElementById("cards").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function markSuggestPeople(i){
+  peopleActive = i;
+  suggestPeopleBox.querySelectorAll(".suggest-item").forEach((el, j) => el.classList.toggle("active", j === i));
+}
+peopleInput.addEventListener("input", () => { qPeople = peopleInput.value; applyView(); showSuggestPeople(); });
+peopleInput.addEventListener("focus", showSuggestPeople);
+peopleInput.addEventListener("keydown", e => {
+  if (e.key === "ArrowDown" && peopleItems.length) { e.preventDefault(); markSuggestPeople((peopleActive + 1) % peopleItems.length); }
+  else if (e.key === "ArrowUp" && peopleItems.length) { e.preventDefault(); markSuggestPeople((peopleActive - 1 + peopleItems.length) % peopleItems.length); }
+  else if (e.key === "Enter" && peopleActive >= 0) { e.preventDefault(); pickSuggestPeople(peopleActive); }
+  else if (e.key === "Escape") { hideSuggestPeople(); }
+});
+peopleInput.addEventListener("blur", () => { setTimeout(hideSuggestPeople, 150); });
+document.addEventListener("click", e => { if (!e.target.closest(".search-box")) hideSuggestPeople(); });
 
 /* ===== 單款酒詳細頁（彈出層，步驟式編排） ===== */
 const backdrop = document.getElementById("modalBackdrop");
